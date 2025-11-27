@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class StudentServiceImpl {
     @Autowired
-    StudentRepository studentRepository;
+    private StudentRepository studentRepository;
     public Student createStudent(StudentDto studentDto) {
         Student studentExist = studentRepository.findByMsv(studentDto.getMsv());
         if(studentExist != null){
